@@ -1,0 +1,227 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>my blog | xljのblog</title><meta name="author" content="xlj"><meta name="copyright" content="xlj"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="栈 定义只允许在表的末端进行插入和删除的线性表。允许插入删除的叫栈顶，不允许插入删除的叫栈底。其性质为后进先出。  基本操作  初始化 求长度 取栈顶元素 入栈 出栈 判断栈是否为空 清空栈   常见存储方式：顺序存储与链式存储   顺序存储 顺序栈的类模板定义 元素：栈顶指针（下标形式）、最大容量、数据元素的数组（elems） 函数：构造函数、析构函数、入栈、出栈、求长度等等。  注意点  对于">
+<meta property="og:type" content="article">
+<meta property="og:title" content="my blog">
+<meta property="og:url" content="http://example.com/2022/02/16/my-blog/index.html">
+<meta property="og:site_name" content="xljのblog">
+<meta property="og:description" content="栈 定义只允许在表的末端进行插入和删除的线性表。允许插入删除的叫栈顶，不允许插入删除的叫栈底。其性质为后进先出。  基本操作  初始化 求长度 取栈顶元素 入栈 出栈 判断栈是否为空 清空栈   常见存储方式：顺序存储与链式存储   顺序存储 顺序栈的类模板定义 元素：栈顶指针（下标形式）、最大容量、数据元素的数组（elems） 函数：构造函数、析构函数、入栈、出栈、求长度等等。  注意点  对于">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/article_picture.jpg">
+<meta property="article:published_time" content="2022-02-16T06:26:03.000Z">
+<meta property="article:modified_time" content="2022-02-16T06:30:13.482Z">
+<meta property="article:author" content="xlj">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/article_picture.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2022/02/16/my-blog/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'my blog',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-02-16 14:30:13'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.0.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open 计算机课内 计算机课外"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/article_picture.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">xljのblog</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open 计算机课内 计算机课外"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">my blog</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-02-16T06:26:03.000Z" title="发表于 2022-02-16 14:26:03">2022-02-16</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-02-16T06:30:13.482Z" title="更新于 2022-02-16 14:30:13">2022-02-16</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/bug/">bug</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/bug/bug-computer/">bug_computer</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.7k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>6分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="my blog"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h1><ol>
+<li><p>定义<br>只允许在表的末端进行插入和删除的线性表。允许插入删除的叫栈顶，不允许插入删除的叫栈底。其性质为后进先出。</p>
+</li>
+<li><p>基本操作</p>
+<ul>
+<li>初始化</li>
+<li>求长度</li>
+<li>取栈顶元素</li>
+<li>入栈</li>
+<li>出栈</li>
+<li>判断栈是否为空</li>
+<li>清空栈</li>
+</ul>
+</li>
+<li><p>常见存储方式：顺序存储与链式存储</p>
+</li>
+</ol>
+<h2 id="顺序存储"><a href="#顺序存储" class="headerlink" title="顺序存储"></a>顺序存储</h2><ol>
+<li><p>顺序栈的类模板定义<br> 元素：栈顶指针（下标形式）、最大容量、数据元素的数组（elems）<br> 函数：构造函数、析构函数、入栈、出栈、求长度等等。</p>
+</li>
+<li><p>注意点</p>
+<ul>
+<li>对于top指针的初值可以设置为两种，-1或0。在本文中设置为-1.</li>
+<li>不同的top初值在写函数时操作完全不同。主要体现在入栈与出栈上<br>  top&#x3D;&#x3D;-1，先加一，再入栈；先出栈，再减一。<br>  top&#x3D;&#x3D; 0 , 先入栈，再加一；先减一，再出栈。</li>
+</ul>
+</li>
+<li><p>类模板定义</p>
+ <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> <span class="title">ElemType</span>&gt;</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SeqStack</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">protected</span>:</span><br><span class="line">    <span class="comment">// 顺序栈的数据成员:</span></span><br><span class="line">    <span class="keyword">int</span> top1;										<span class="comment">// 栈顶指针</span></span><br><span class="line">    <span class="keyword">int</span> maxSize;									<span class="comment">// 栈的最大容量</span></span><br><span class="line">    ElemType* elems;								<span class="comment">// 元素存储空间</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">//  顺序栈的方法声明及重载编译系统默认方法声明:</span></span><br><span class="line">    <span class="built_in">SeqStack</span>(<span class="keyword">int</span> size = DEFAULT_SIZE);				<span class="comment">// 构造函数</span></span><br><span class="line">    <span class="keyword">virtual</span> ~<span class="built_in">SeqStack</span>();							<span class="comment">// 析构函数</span></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">GetLength</span><span class="params">()</span> <span class="keyword">const</span></span>;							<span class="comment">// 求栈的长度</span></span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">IsEmpty</span><span class="params">()</span> <span class="keyword">const</span></span>;						    <span class="comment">// 判断栈是否为空</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Clear</span><span class="params">()</span></span>;									<span class="comment">// 将栈清空</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Traverse</span><span class="params">(<span class="keyword">void</span> (*Visit)(<span class="keyword">const</span> ElemType&amp;))</span> <span class="keyword">const</span></span>;	<span class="comment">// 遍历栈</span></span><br><span class="line">    <span class="function">Status <span class="title">Push</span><span class="params">(<span class="keyword">const</span> ElemType e)</span></span>;				    <span class="comment">// 入栈</span></span><br><span class="line">    <span class="function">Status <span class="title">Top</span><span class="params">(ElemType&amp; e)</span> <span class="keyword">const</span></span>;			        <span class="comment">// 取顶元素</span></span><br><span class="line">    <span class="function">Status <span class="title">Pop</span><span class="params">(ElemType&amp; e)</span></span>;					    <span class="comment">// 出栈</span></span><br><span class="line">    <span class="built_in">SeqStack</span>(<span class="keyword">const</span> SeqStack&lt;ElemType&gt;&amp; s);		    <span class="comment">// 复制构造函数</span></span><br><span class="line">    SeqStack&lt;ElemType&gt;&amp; <span class="keyword">operator</span> =(<span class="keyword">const</span> SeqStack&lt;ElemType&gt;&amp; s);</span><br><span class="line">                                                    <span class="comment">// 赋值语句重载</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>入栈出栈代码</p>
+ <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> <span class="title">ElemType</span>&gt;</span><span class="comment">// 入栈</span></span><br><span class="line">Status SeqStack&lt;ElemType&gt;::<span class="built_in">Push</span>(<span class="keyword">const</span> ElemType e)</span><br><span class="line"><span class="comment">// 操作结果：将元素e追加到栈顶,如成功则返加SUCCESS,如栈已满将返回OVER_FLOW</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (top == maxSize - <span class="number">1</span>) <span class="comment">// 栈已满</span></span><br><span class="line">        <span class="keyword">return</span> OVER_FLOW;</span><br><span class="line">    <span class="keyword">else</span> &#123;	<span class="comment">// 操作成功</span></span><br><span class="line">        elems[++top] = e;	<span class="comment">// 将元素e追加到栈顶</span></span><br><span class="line">        <span class="keyword">return</span> SUCCESS;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p> 注意点：入栈判满；top初值为-1，先加一，再入栈。</p>
+ <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> <span class="title">ElemType</span>&gt;</span></span><br><span class="line">Status SeqStack&lt;ElemType&gt;::<span class="built_in">Pop</span>(ElemType&amp; e)</span><br><span class="line"><span class="comment">// 操作结果：如栈非空,删除栈顶元素,并用e返回栈顶元素,函数返回SUCCESS,否则</span></span><br><span class="line"><span class="comment">// 函数返回UNDER_FLOW</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">IsEmpty</span>())	 <span class="comment">// 栈空</span></span><br><span class="line">        <span class="keyword">return</span> UNDER_FLOW;</span><br><span class="line">    <span class="keyword">else</span> &#123; <span class="comment">// 操作成功</span></span><br><span class="line">        e=elems[top--];</span><br><span class="line">        <span class="keyword">return</span> SUCCESS;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p> **注意点：出栈判空；top初值为-1，先出栈，再减一。</p>
+</li>
+<li><p>共享数组的顺序栈<br>对于顺序存储来说，存储空间很浪费，而且容易产生溢出现象，因此共享数组的顺序栈存储方式出现了。其本质是将一个顺序栈放在数组头，另一个放在数组的尾，等于共享顶部的资源空间。</p>
+<ul>
+<li>栈满情况 top1&#x3D;&#x3D; top2-1</li>
+<li>栈空情况 top1等于0 并且 top2等于 maxsize</li>
+<li>对于栈的基本操作需要指明具体操作哪一个栈，所以对基本所有的类内成员函数需要多加一个参数no来确定要操作的是哪一个栈。<br>修改后的类模板定义如下 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> <span class="title">ElemType</span>&gt;</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SeqStack</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">protected</span>:</span><br><span class="line">    <span class="comment">// 顺序栈的数据成员:</span></span><br><span class="line">    <span class="keyword">int</span> top1,top2;										<span class="comment">// 栈顶指针</span></span><br><span class="line">    <span class="keyword">int</span> maxSize;									<span class="comment">// 栈的最大容量</span></span><br><span class="line">    ElemType* elems;								<span class="comment">// 元素存储空间</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">//  顺序栈的方法声明及重载编译系统默认方法声明:</span></span><br><span class="line">    <span class="built_in">SeqStack</span>(<span class="keyword">int</span> size = DEFAULT_SIZE);				<span class="comment">// 构造函数</span></span><br><span class="line">    <span class="keyword">virtual</span> ~<span class="built_in">SeqStack</span>();							<span class="comment">// 析构函数</span></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">GetLength</span><span class="params">()</span> <span class="keyword">const</span></span>;							<span class="comment">//求长度</span></span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">IsEmpty</span><span class="params">(<span class="keyword">int</span> no)</span> <span class="keyword">const</span></span>;							<span class="comment">// 判断栈是否为空</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Clear</span><span class="params">()</span></span>;									<span class="comment">// 将栈清空</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Traverse</span><span class="params">(<span class="keyword">void</span> (*Visit)(<span class="keyword">const</span> ElemType&amp;),<span class="keyword">int</span> no)</span> <span class="keyword">const</span></span>;	<span class="comment">// 遍历栈</span></span><br><span class="line">    <span class="function">Status <span class="title">Push</span><span class="params">(<span class="keyword">const</span> ElemType e)</span></span>;				    <span class="comment">// 入栈</span></span><br><span class="line">    <span class="function">Status <span class="title">Top</span><span class="params">(ElemType&amp; e,<span class="keyword">int</span> no)</span> <span class="keyword">const</span></span>;				    <span class="comment">// 取顶元素</span></span><br><span class="line">    <span class="function">Status <span class="title">Pop</span><span class="params">(ElemType&amp; e,<span class="keyword">int</span> no)</span></span>;					    <span class="comment">// 出栈</span></span><br><span class="line">    <span class="built_in">SeqStack</span>(<span class="keyword">const</span> SeqStack&lt;ElemType&gt;&amp; s);		<span class="comment">// 复制构造函数</span></span><br><span class="line">    SeqStack&lt;ElemType&gt;&amp; <span class="keyword">operator</span> =(<span class="keyword">const</span> SeqStack&lt;ElemType&gt;&amp; s); <span class="comment">// 赋值语句重载</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+<h2 id="链式存储"><a href="#链式存储" class="headerlink" title="链式存储"></a>链式存储</h2><ol>
+<li><p>对于链式栈采用链表的方式存储元素，可以同时让多个栈共享存储。这里主要使用不带表头的单链表实现链式栈。表头为栈顶，入栈出栈都是对表头进行操作。<br>问题：<br> 1）栈顶放在链表的头部&#x2F;尾部，哪个操作起来方便？</p>
+<ul>
+<li>表头，因为表尾不便于删除，每次删除都需要遍历找前驱。</li>
+</ul>
+<p> 2）带头结点和不带头结点相比，有多大影响？</p>
+<ul>
+<li>不带头结点链表的入栈出栈都在表头进行，比较简单方便。</li>
+</ul>
+<p> 3）和链表相比，类定义主要不同点在哪里？</p>
+<ul>
+<li>主要区别在于链式栈只对头结点操作，而链表有插入删除等等对于中间结点的操作。</li>
+</ul>
+</li>
+<li><p>链式栈类模板定义<br>元素：只需要一个栈顶指针即可<br>成员函数：构造函数、析构函数、入栈与出栈、判空</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> <span class="title">ElemType</span>&gt;</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">LinkStack</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">protected</span>:</span><br><span class="line"><span class="comment">//  链栈的数据成员:</span></span><br><span class="line">    Node&lt;ElemType&gt; *top;							<span class="comment">// 栈顶指针</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"><span class="comment">//  链栈的函数成员:</span></span><br><span class="line">    <span class="built_in">LinkStack</span>();									<span class="comment">// 无参数的构造函数</span></span><br><span class="line">    <span class="keyword">virtual</span> ~<span class="built_in">LinkStack</span>();							<span class="comment">// 析构函数</span></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">GetLength</span><span class="params">()</span> <span class="keyword">const</span></span>;							<span class="comment">// 求栈长度</span></span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">IsEmpty</span><span class="params">()</span> <span class="keyword">const</span></span>;							<span class="comment">// 判断栈是否为空</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Clear</span><span class="params">()</span></span>;									<span class="comment">// 将栈清空</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Traverse</span><span class="params">(<span class="keyword">void</span> (*Visit)(<span class="keyword">const</span> ElemType &amp;))</span> <span class="keyword">const</span> </span>;	<span class="comment">// 遍历栈</span></span><br><span class="line">    <span class="function">Status <span class="title">Push</span><span class="params">(<span class="keyword">const</span> ElemType e)</span></span>;					<span class="comment">// 入栈</span></span><br><span class="line">    <span class="function">Status <span class="title">Top</span><span class="params">(ElemType &amp;e)</span> <span class="keyword">const</span></span>;					<span class="comment">// 返回栈顶元素</span></span><br><span class="line">    <span class="function">Status <span class="title">Pop</span><span class="params">(ElemType &amp;e)</span></span>;						<span class="comment">// 出栈</span></span><br><span class="line">    <span class="built_in">LinkStack</span>(<span class="keyword">const</span> LinkStack&lt;ElemType&gt; &amp;s);		<span class="comment">// 复制构造函数</span></span><br><span class="line">    LinkStack&lt;ElemType&gt; &amp;<span class="keyword">operator</span> =(<span class="keyword">const</span> LinkStack&lt;ElemType&gt; &amp;s); <span class="comment">// 赋值语句重载</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li>
+<li><p>入栈出栈</p>
+ <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> <span class="title">ElemType</span>&gt;</span></span><br><span class="line">Status LinkStack&lt;ElemType&gt;::<span class="built_in">Push</span>(<span class="keyword">const</span> ElemType e)</span><br><span class="line"><span class="comment">// 操作结果：将元素e追加到栈顶,如成功则返加SUCCESS,否则如动态内存已耗尽</span></span><br><span class="line"><span class="comment">//	将返回OVER_FLOW</span></span><br><span class="line">&#123;</span><br><span class="line">    Node&lt;ElemType&gt; *p = <span class="keyword">new</span> Node&lt;ElemType&gt;(e, top);</span><br><span class="line">    <span class="keyword">if</span> (p == <span class="literal">NULL</span>) 	<span class="comment">// 系统内存耗尽</span></span><br><span class="line">        <span class="keyword">return</span> OVER_FLOW;</span><br><span class="line">    <span class="keyword">else</span>	&#123;	<span class="comment">// 操作成功</span></span><br><span class="line">        top = p;</span><br><span class="line">        <span class="keyword">return</span> SUCCESS;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p> 虽然说链式存储不用像顺序存储那样考虑空间的问题，但是系统在分配动态内存时还是存在动态内存耗尽的可能性，所以仍然要对动态开辟的空间进行判空操作。</p>
+ <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> <span class="title">ElemType</span>&gt;</span></span><br><span class="line">Status LinkStack&lt;ElemType&gt;::<span class="built_in">Pop</span>(ElemType &amp;e)</span><br><span class="line"><span class="comment">// 操作结果：如栈非空,删除栈顶元素,并用e返回栈顶元素,函数返回SUCCESS,否则</span></span><br><span class="line"><span class="comment">//	函数返回UNDER_FLOW</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">IsEmpty</span>())	<span class="comment">// 栈空</span></span><br><span class="line">        <span class="keyword">return</span> UNDER_FLOW;</span><br><span class="line">    <span class="keyword">else</span>	&#123;	<span class="comment">// 操作成功</span></span><br><span class="line">        Node&lt;ElemType&gt; *p = top;	<span class="comment">// 保留原栈顶</span></span><br><span class="line">        e = top-&gt;data;				<span class="comment">// 用e返回栈顶元素</span></span><br><span class="line">        top = top-&gt;next;			<span class="comment">// 修改栈顶</span></span><br><span class="line">        <span class="keyword">delete</span> p;					<span class="comment">// 删除原栈顶结点</span></span><br><span class="line">        <span class="keyword">return</span> SUCCESS;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p> 出栈首先要判空，然后top向后移动一位，再将之前的栈顶删除</p>
+</li>
+<li><p>栈的两种存储结构的比较</p>
+</li>
+</ol>
+<ul>
+<li>栈的顺序存储结构是一种静态的存储结构，必须确定存储空间的大小，太大会造成存储空间的浪费，太小会因栈满而产生溢出。</li>
+<li>栈的链接存储结构是一种动态的存储结构，因为结点是动态分配的，所以不会出现溢出问题。</li>
+</ul>
+<h2 id="栈的应用——表达式求值"><a href="#栈的应用——表达式求值" class="headerlink" title="栈的应用——表达式求值"></a>栈的应用——表达式求值</h2></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">xlj</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2022/02/16/my-blog/">http://example.com/2022/02/16/my-blog/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">xljのblog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/article_picture.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2022/01/22/hello-world/"><img class="next-cover" src="/img/article_picture.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Hello World</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">xlj</div><div class="author-info__description"></div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/xxxxxlj" target="_blank" title="Github"><i class="fab fa-github"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A0%88"><span class="toc-number">1.</span> <span class="toc-text">栈</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%BA%E5%BA%8F%E5%AD%98%E5%82%A8"><span class="toc-number">1.1.</span> <span class="toc-text">顺序存储</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%93%BE%E5%BC%8F%E5%AD%98%E5%82%A8"><span class="toc-number">1.2.</span> <span class="toc-text">链式存储</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%88%E7%9A%84%E5%BA%94%E7%94%A8%E2%80%94%E2%80%94%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%B1%82%E5%80%BC"><span class="toc-number">1.3.</span> <span class="toc-text">栈的应用——表达式求值</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/02/16/my-blog/" title="my blog"><img src="/img/article_picture.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="my blog"/></a><div class="content"><a class="title" href="/2022/02/16/my-blog/" title="my blog">my blog</a><time datetime="2022-02-16T06:26:03.000Z" title="发表于 2022-02-16 14:26:03">2022-02-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/01/22/hello-world/" title="Hello World"><img src="/img/article_picture.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/2022/01/22/hello-world/" title="Hello World">Hello World</a><time datetime="2022-01-22T15:23:42.003Z" title="发表于 2022-01-22 23:23:42">2022-01-22</time></div></div></div></div></div></div></main><footer id="footer" style="background: grey"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By xlj</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">本网站旨在记录自己的学习与经历，欢迎大家浏览。</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"></div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-nest.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
